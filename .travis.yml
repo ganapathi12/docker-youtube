@@ -5,9 +5,6 @@ services:
 before_install:
   - docker build -t dockeryoutube -f Dockerfile.dev .
 
-script:
-  - docker run -e CI=true dockeryoutube npm run test
-
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESS_KEY_ID
